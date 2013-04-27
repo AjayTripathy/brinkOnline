@@ -1,28 +1,26 @@
-function Ship () {
+function Ship (modules, layout) {
 	if (!(this instanceof Ship)) return new Ship();
 	
-  //ship building stuff
-	this.modules = {};
-	this.layout = {};
+    //ship building stuff
+	this.modules = modules;
+	this.layout = layout;
 
-  //ship stats as computed from the layout and modules
-  this.health = 0;
+    //ship stats as computed from the layout and modules
+    this.health = 0;
 	this.speed = 0;
 	this.powerBank = 0;
 	this.oxygenPercent = 0;
 	this.crewCount = 0;
-  this.moneys = 0;
-  this.weight = 0;
+    this.moneys = 0;
+    this.weight = 0;
 
 
-  //combad stuff
+    //combat stuff
 	this.combatOrders = {}
 
-  //game board stuff
+    //game board stuff
 	this.area = {}
 	this.engagedShips = {}
-  
-   
 }
 
 //high level ship moves
