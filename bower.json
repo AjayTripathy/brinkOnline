@@ -9,5 +9,6 @@
   ],
   "dependencies": {
  	"underscore" : "1.4.x"
+  "requirejs" : "2.1.x"
   }
 }
