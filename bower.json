@@ -1,0 +1,13 @@
+{
+  "name": "brinkOnline",
+  "version": "0.0.1",
+  "main": "./static/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+ 	"underscore" : "1.4.x"
+  }
+}
