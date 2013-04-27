@@ -6,7 +6,7 @@ function Ship () {
 	this.layout = {};
 
   //ship stats as computed from the layout and modules
-	this.health = 0;
+  this.health = 0;
 	this.speed = 0;
 	this.powerBank = 0;
 	this.oxygenPercent = 0;
