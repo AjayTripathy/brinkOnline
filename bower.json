@@ -9,7 +9,8 @@
     ],
     "dependencies": {
         "jquery": "2.0.x",
-        "underscore" : "1.4.x",
-        "requirejs" : "2.1.x"
+        "underscore": "1.4.x",
+        "requirejs": "2.1.x",
+        "threejs": "latest"
     }
 }

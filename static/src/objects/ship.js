@@ -1,4 +1,4 @@
-define('Ship', function() {
+define('ship', function() {
     function Ship (modules, coreModule, options) {
         if (!(this instanceof Ship)) return new Ship();
 
@@ -112,5 +112,6 @@ define('Ship', function() {
     Ship.prototype._useWeapons = function (targetObj){
         
     }
+    
     return Ship;
 });

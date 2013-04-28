@@ -24,7 +24,7 @@ app.configure(function() {
 
 //mongoskin
 var mongo = require('mongoskin');
-var db = mongo.db('localhost:27017/brink?auto_reconnect');
+var db = mongo.db('localhost:27017/brink?auto_reconnect', {safe: true});
 //var userColl = db.collection('users');
 
 app.get('/', function(req, res) {
