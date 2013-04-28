@@ -3,7 +3,8 @@ define('Hardpoint', function() {
 		if (!(this instanceof Hardpoint)) return new Hardpoint();
 		
 		options = util.extend({ 
-			maxWeight : 100
+			maxWeight : 100,
+			threeObj = null
 		}, options);
 		util.extend(this, options);
 
@@ -24,6 +25,12 @@ define('Hardpoint', function() {
 
 	Hardpoint.prototype.validateModule = function(module){
 		return true;
+	}
+
+	Hardpoint.prototype.removeChildModule = function(){
+		childModule = this.children[0];
+		childModule.remove();
+		this.children = [];
 	}
 
 	return Hardpoint;

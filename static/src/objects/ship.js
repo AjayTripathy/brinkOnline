@@ -59,8 +59,12 @@ define('ship', function() {
         *called when the player adds to their ship
         *@param module : an instance of the module class
     */
-    Ship.prototype.addModule =  function(module, hardpoint) {
-        
+    Ship.prototype.addModule =  function(module) {
+        this.modules[module.id] = module;
+    }
+
+    Ship.prototype.removeModule = function(module){
+        delete this.modules[module.id];
     }
 
 
