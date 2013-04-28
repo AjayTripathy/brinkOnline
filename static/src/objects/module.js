@@ -1,4 +1,4 @@
-define('Module', function() {
+define(function() {
     function Module (options) {
         if (!(this instanceof Module)) return new Module();
     	

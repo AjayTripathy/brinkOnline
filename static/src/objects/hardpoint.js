@@ -1,4 +1,4 @@
-define('Hardpoint', function() {
+define(function() {
 	function Hardpoint(parentModule, options){
 		if (!(this instanceof Hardpoint)) return new Hardpoint();
 		

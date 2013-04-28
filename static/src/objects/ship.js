@@ -1,4 +1,4 @@
-define('ship', function() {
+define(function() {
     function Ship (modules, coreModule, options) {
         if (!(this instanceof Ship)) return new Ship();
 
