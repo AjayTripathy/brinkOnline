@@ -3,6 +3,9 @@ require.config({
         "jquery": "components/jquery/jquery",
         "underscore": "components/underscore/underscore",
         "ship": "src/objects/ship",
+        "module": "src/objects/module",
+        "hardpoint": "src/objects/hardpoint",
+        "area": "src/objects/area",
         "stardome": "src/world/stardome",
         "world": "src/world/world",
         "threejs": "components/threejs/build/three.min",
@@ -66,8 +69,8 @@ require.config({
 });
 
 require(['jquery', 'underscore'], function ($, _) {
-    require(['ship'], function (Ship1) {
-        console.log(Ship1)
+    require(['ship', 'module', 'hardpoint'], function (Ship, Module, Hardpoint) {
+        console.log(Module.add)
     });
     require(['world'], function () {
         console.log('world loaded!');

@@ -4,7 +4,7 @@ define(function() {
 		
 		options = util.extend({ 
 			maxWeight : 100,
-			threeObj = null
+			threeObj : null
 		}, options);
 		util.extend(this, options);
 
