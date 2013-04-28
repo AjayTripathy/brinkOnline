@@ -1,27 +1,44 @@
-function Module () {
-    if (!(this instanceof Module)) return new Module();
-	
-    this.name;
-    this.id; 	
-    this.minPower;
-    this.maxPower;
-    this.type;
-    this.weight;
+define('Module', function() {
+    function Module (options) {
+        if (!(this instanceof Module)) return new Module();
+    	
+        options = util.extend({ 
+            name: null,
+            minPower: 0,
+            maxPower: 0,
+            type: null,
+            weight: 100,
+            parent: null,
+            children: []
+        }, options);
+        util.extend(this, options);
 
-    this.hardpoints = [];
-    this.parent;
-}
+        this.id = this.name + util.guid();
+    }
 
 
-/**
-    *called when the player adds to their ship
-    *@param module : an instance of the module class
-*//
+    /**
+     *called when the module takes damage
+     *@param damageObj : a damage object 
+    */
 
-Module.prototype._takeDamage = function (damage) {
-    
-}
+    Module.prototype._takeDamage = function (damageObj) {
+        
+    }
 
-Module.prototype.add = function(parentModule) {
-    this.parent = parentModule;
-}
+    Module.prototype.add = function(hardPoint, ship){
+        if ( hardPoint.validateModule() ){
+            hardPoint.addModule(this);
+            this.parent = hardPoint;
+            ship.modules[this.id] =  this;
+            return true;
+        }
+        else{
+            console.log("Can't add module to hardpoint:" + hardpoint);
+            return false;
+        }
+    }
+
+    return Module;
+});
+

@@ -1,19 +1,19 @@
 {
-  "name": "brinkOnline",
-  "version": "0.0.1",
-  "description": "spreadsheetz online",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "",
-  "author": "Ajay Tripathy <4tripathy@gmail.com>",
-  "license": "SUPER RESTRICTIVE",
-  "dependencies": {
-    "underscore": "1.4.x",
-    "express": "3.0.x",
-    "jade": "0.30.x",
-    "async": "0.2.x",
-    "mongoskin": "0.5.x"
-  }
+    "name": "brinkOnline",
+    "version": "0.0.1",
+    "description": "spreadsheetz online",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": "",
+    "author": "Ajay Tripathy <4tripathy@gmail.com>",
+    "license": "SUPER RESTRICTIVE",
+    "dependencies": {
+        "underscore": "1.4.x",
+        "express": "3.0.x",
+        "jade": "0.30.x",
+        "async": "0.2.x",
+        "mongoskin": "0.5.x"
+    }
 }
