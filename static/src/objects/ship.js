@@ -7,8 +7,8 @@ define(function() {
         util.extend(this, options);
 
         //ship building stuff
-        this.modules = modules;
-        this.coreModule = coreModule;
+        this.shipModules = modules;
+        this.coreShipModule = coreModule;
 
         //ship stats as computed from the layout and modules
         this.health = 0;
@@ -59,12 +59,12 @@ define(function() {
         *called when the player adds to their ship
         *@param module : an instance of the module class
     */
-    Ship.prototype.addModule =  function(module) {
-        this.modules[module.id] = module;
+    Ship.prototype.addShipModule =  function(module) {
+        this.shipModules[module.id] = module;
     }
 
-    Ship.prototype.removeModule = function(module){
-        delete this.modules[module.id];
+    Ship.prototype.removeShipModule = function(module){
+        delete this.shipModules[module.id];
     }
 
 

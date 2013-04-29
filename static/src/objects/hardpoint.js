@@ -1,5 +1,5 @@
 define(function() {
-	function Hardpoint(parentModule, options){
+	function Hardpoint(parentShipModule, options){
 		if (!(this instanceof Hardpoint)) return new Hardpoint();
 		
 		options = util.extend({ 
@@ -8,13 +8,13 @@ define(function() {
 		}, options);
 		util.extend(this, options);
 
-		this.parent = parentModule;
+		this.parent = parentShipModule;
 		this.children = [];
 	}
 
-	Hardpoint.prototype.addModule = function(module){
+	Hardpoint.prototype.addShipModule = function(module){
 		//TODO: check if the hardpoint can handle the module
-		if(this._validateModule(module)){
+		if(this._validateShipModule(module)){
 			this.children = [module];
 			return true;
 		}
@@ -23,13 +23,13 @@ define(function() {
 		}
 	}
 
-	Hardpoint.prototype.validateModule = function(module){
+	Hardpoint.prototype.validateShipModule = function(module){
 		return true;
 	}
 
-	Hardpoint.prototype.removeChildModule = function(){
-		childModule = this.children[0];
-		childModule.remove();
+	Hardpoint.prototype.removeChildShipModule = function(){
+		var childShipModule = this.children[0];
+		childShipModule.remove();
 		this.children = [];
 	}
 
