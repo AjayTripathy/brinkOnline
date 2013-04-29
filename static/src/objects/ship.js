@@ -8,10 +8,6 @@ define(['util'] ,function(util) {
         }, options);
         util.extend(this, options);
 
-        //ship building stuff
-        this.shipModules = modules;
-        this.coreShipModule = coreModule;
-
         //ship stats as computed from the layout and modules
         this.health = 0;
         this.speed = 0;
