@@ -73,9 +73,15 @@ require.config({
 });
 
 require(['ship','shipmodule', 'hardpoint'], function (Ship, ShipModule, Hardpoint) {
-    // gunz = new ShipModule({numHardPoints: 5});
-    // sh = new Ship({});
-    // gunz.add();
+    //TEST CODE
+    core = new ShipModule({name: "core", numHardPoints: 5});
+    gunz = new ShipModule({name: "gun", numHardPoints: 1});
+    shieldz = new ShipModule({name: "shield", numHardPoints: 0})
+    sh = new Ship({});
+    sh.addCoreModule(core);
+    gunz.add(core, 0);
+    shieldz.add(gunz, 0);
+    gunz.remove();
 });
 require(['world'], function () {
     console.log('world loaded!');

@@ -4,16 +4,17 @@ define(['util'],function(util) {
 		
 		options = util.extend({ 
 			maxWeight : 100,
+			position: 0
 		}, options);
 		util.extend(this, options);
-
+		
 		this.parent = parentShipModule;
 		this.children = [];
 	}
 
 	Hardpoint.prototype.addShipModule = function(module){
 		//TODO: check if the hardpoint can handle the module
-		if(this._validateShipModule(module)){
+		if(this.validateShipModule(module)){
 			this.children = [module];
 			return true;
 		}

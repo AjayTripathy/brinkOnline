@@ -31,7 +31,13 @@ define(['hardpoint', 'util'], function(HardPoint, util) {
         
     }
 
-    ShipModule.prototype.add = function(hardPoint, ship){
+    ShipModule.prototype.getHardPoint = function (position){
+        return this.children[position];
+    }
+
+    ShipModule.prototype.add = function(module, hardPointPosition){
+        var hardPoint = module.getHardPoint(hardPointPosition);
+        var ship = module.ship;
         if ( hardPoint.validateShipModule() ){
             hardPoint.addShipModule(this);
             this.parent = hardPoint;
@@ -52,7 +58,7 @@ define(['hardpoint', 'util'], function(HardPoint, util) {
             childHardpoint.removeChildShipModule();
         }
         this.children = [];
-        this.parent.child = null;
+        this.parent.children = [];
         this.parent = null;
     }
 

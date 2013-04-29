@@ -57,6 +57,13 @@ define(['util'] ,function(util) {
         *called when the player adds to their ship
         *@param module : an instance of the module class
     */
+
+    Ship.prototype.addCoreModule = function(module){
+        this.shipModules[module.id] = module;
+        this.coreShipModule = module;
+        module.ship = this;
+    }
+
     Ship.prototype.addShipModule =  function(module) {
         this.shipModules[module.id] = module;
     }
