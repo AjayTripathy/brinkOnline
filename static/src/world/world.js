@@ -1,6 +1,7 @@
  define([
     'threejs',
     'stardome',
+    'jquery',
     'detector',
     'stats',
     'orbitcontrols',
@@ -13,7 +14,7 @@
     'renderpass',
     'shaderpass',
     'bloompass'
-], function (THREE, Stardome) {
+], function (THREE, Stardome, $) {
     var camera, renderer, controls, projector, scene, stats, container, plane, composer, effectFXAA, effectSSAO, light;
     var depthMaterial, depthTarget;
     var sunSprite;

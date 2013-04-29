@@ -23,6 +23,9 @@ require.config({
         "bloompass": "components/threejs/examples/js/postprocessing/BloomPass"
     },
     shim: {
+        "jquery": {
+            "exports": '$'
+        },
         "underscore": {
             "exports": '_'
         },
@@ -68,11 +71,9 @@ require.config({
     }
 });
 
-require(['jquery', 'underscore'], function ($, _) {
-    require(['ship','shipmodule', 'hardpoint'], function (Ship, ShipModule, Hardpoint) {
-        console.log(Ship, ShipModule, Hardpoint)
-    });
-    require(['world'], function () {
-        console.log('world loaded!');
-    });
+require(['ship','shipmodule', 'hardpoint'], function (Ship, ShipModule, Hardpoint) {
+    console.log(Ship, ShipModule, Hardpoint)
+});
+require(['world'], function () {
+    console.log('world loaded!');
 });
