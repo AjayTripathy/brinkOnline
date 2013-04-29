@@ -2,6 +2,7 @@ require.config({
     paths: {
         "jquery": "components/jquery/jquery",
         "underscore": "components/underscore/underscore",
+        "util": "lib/util",
         "ship": "src/objects/ship",
         "shipmodule": "src/objects/shipmodule",
         "hardpoint": "src/objects/hardpoint",
@@ -68,9 +69,11 @@ require.config({
     }
 });
 
-require(['jquery', 'underscore'], function ($, _) {
+require(['jquery', 'underscore', 'util'], function ($, _ , util) {
     require(['ship','shipmodule', 'hardpoint'], function (Ship, ShipModule, Hardpoint) {
-        console.log(Ship, ShipModule, Hardpoint)
+        gunz = new ShipModule({numHardPoints: 5});
+        sh = new Ship({});
+        gunz.add()
     });
     require(['world'], function () {
         console.log('world loaded!');
