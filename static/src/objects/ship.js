@@ -1,8 +1,10 @@
-define(function() {
-    function Ship (modules, coreModule, options) {
+define(['util'] ,function(util) {
+    function Ship (options) {
         if (!(this instanceof Ship)) return new Ship();
 
-        options = util.extend({ 
+        options = util.extend({
+            shipModules: {},
+            coreShipModule: null 
         }, options);
         util.extend(this, options);
 

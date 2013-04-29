@@ -1,10 +1,9 @@
-define(function() {
+define(['util'],function(util) {
 	function Hardpoint(parentShipModule, options){
 		if (!(this instanceof Hardpoint)) return new Hardpoint();
 		
 		options = util.extend({ 
 			maxWeight : 100,
-			threeObj : null
 		}, options);
 		util.extend(this, options);
 

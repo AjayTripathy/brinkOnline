@@ -1,4 +1,4 @@
-define('util', function() {
+define(function() {
   var util = {
     
     debug: false,
@@ -25,7 +25,7 @@ define('util', function() {
       return dest;
     },
 
-    createUUID: function() {
+    guid: function() {
       // http://www.ietf.org/rfc/rfc4122.txt
       var s = [];
       var hexDigits = "0123456789abcdef";
@@ -79,5 +79,6 @@ define('util', function() {
       return setZeroTimeoutPostMessage;
     }(this)),
   }
+  //window.util = util;
   return util;
 })

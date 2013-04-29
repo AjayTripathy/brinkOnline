@@ -1,4 +1,4 @@
-define(function() {
+define(['hardpoint', 'util'], function(HardPoint, util) {
     function ShipModule (options) {
         if (!(this instanceof ShipModule)) return new ShipModule();
     	
@@ -9,12 +9,16 @@ define(function() {
             type: null,
             weight: 100,
             parent: null,
-            children: []
+            numHardPoints: 0
         }, options);
         util.extend(this, options);
 
         this.id = this.name + util.guid();
         this.ship = null;
+        this.children = []
+        for (var i = 0; i < this.numHardPoints; i = i + 1){
+            this.children.push(new HardPoint(this, {}));
+        }
     }
 
 
